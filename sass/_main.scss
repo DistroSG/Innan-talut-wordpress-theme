@@ -1,0 +1,24 @@
+#page {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "content"
+    "footer";
+}
+
+#masthead {
+    grid-area: header;
+}
+
+#content {
+    grid-area: content;
+}
+
+#main-nav {
+    grid-area: nav;
+}
+
+#colophon {
+    grid-area: footer;
+}

@@ -8,5 +8,20 @@ License: GNU General Public License v3.0 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: innan-taulut
 */
+#page {
+  display: grid;
+  grid-template-areas: "header" "nav" "content" "footer"; }
+
+#masthead {
+  grid-area: header; }
+
+#content {
+  grid-area: content; }
+
+#main-nav {
+  grid-area: nav; }
+
+#colophon {
+  grid-area: footer; }
 
 /*# sourceMappingURL=style.css.map */
