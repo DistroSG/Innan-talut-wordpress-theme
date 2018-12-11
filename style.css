@@ -8,12 +8,36 @@ License: GNU General Public License v3.0 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: innan-taulut
 */
+body {
+  margin: 0; }
+
 #page {
   display: grid;
   grid-template-areas: "header" "nav" "content" "footer"; }
 
 #masthead {
-  grid-area: header; }
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Prata', serif;
+  text-align: center; }
+
+#site-title a {
+  font-size: 4rem;
+  font-weight: normal;
+  color: lightgrey;
+  text-align: center;
+  text-decoration: none; }
+
+#site-title a:focus,
+#site-title a:hover {
+  color: white; }
+
+#site-description {
+  text-transform: uppercase; }
 
 #content {
   grid-area: content; }
@@ -23,5 +47,9 @@ Text Domain: innan-taulut
 
 #colophon {
   grid-area: footer; }
+
+@media all and (min-width: 56.25rem) {
+  #site-title a {
+    font-size: 6rem; } }
 
 /*# sourceMappingURL=style.css.map */

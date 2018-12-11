@@ -1,14 +1,38 @@
+body {
+    margin: 0;
+}
+
 #page {
     display: grid;
-    grid-template-areas: 
-    "header"
-    "nav"
-    "content"
-    "footer";
+    grid-template-areas: "header" "nav" "content" "footer";
 }
 
 #masthead {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Prata', serif;
+    text-align: center;
+}
+
+#site-title a {
+    font-size: 4rem;
+    font-weight: normal;
+    color: lightgrey;
+    text-align: center;
+    text-decoration: none;
+}
+
+#site-title a:focus,
+#site-title a:hover {
+    color: white;
+}
+
+#site-description {
+    text-transform: uppercase;
 }
 
 #content {
@@ -21,4 +45,10 @@
 
 #colophon {
     grid-area: footer;
+}
+
+@media all and (min-width: $breakpoint-medium) {
+    #site-title a {
+        font-size: 6rem;
+    }
 }
