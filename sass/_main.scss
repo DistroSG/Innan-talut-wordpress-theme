@@ -1,5 +1,14 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Prata', serif;
 }
 
 #page {
@@ -14,8 +23,16 @@ body {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    font-family: 'Prata', serif;
     text-align: center;
+}
+
+#masthead h1 {
+    margin-bottom: 0.3rem;
+}
+
+#masthead h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
 #site-title a {
@@ -49,6 +66,6 @@ body {
 
 @media all and (min-width: $breakpoint-medium) {
     #site-title a {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 }
