@@ -12,7 +12,7 @@
     <body <?php body_class(); ?>>
 
         <div id="page" class="site">
-            
+
             <header id="masthead" class="site-header">
                 <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
                 <?php $description = get_bloginfo( 'description', 'display' ); ?>
@@ -32,6 +32,6 @@
 								<span id="nav-icon-line-3" class="nav-icon-line"></span>
 							</span>
                     </button>
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 2 ) ); ?>
                 </nav>
             <?php endif; ?> 
