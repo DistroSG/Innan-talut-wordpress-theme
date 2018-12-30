@@ -12,6 +12,7 @@
     <body <?php body_class(); ?>>
 
         <div id="page" class="site">
+            
             <header id="masthead" class="site-header">
                 <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
                 <?php $description = get_bloginfo( 'description', 'display' ); ?>
@@ -21,6 +22,16 @@
                 <?php endif; ?>
 
             </header>
-            <nav id="main-nav" class="site-nav"></nav>
-            <aside id="sidebar-primary" class="site-sidebar"></aside>
-            <main id="content" class="site-content">
+
+            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                <nav id="main-nav" class="site-nav" aria-expanded="false">
+                    <button id="nav-button">
+							<span id="nav-icon">
+								<span id="nav-icon-line-1" class="nav-icon-line"></span>
+								<span id="nav-icon-line-2" class="nav-icon-line"></span>
+								<span id="nav-icon-line-3" class="nav-icon-line"></span>
+							</span>
+                    </button>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                </nav>
+            <?php endif; ?> 

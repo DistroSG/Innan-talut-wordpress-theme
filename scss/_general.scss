@@ -10,3 +10,26 @@ body {
 h1 {
     font-family: 'Prata', serif;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+ul ul {
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+button:focus,
+a:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}

@@ -1,5 +1,3 @@
-            </main>
-
             <footer id="colophon" class="site-footer"></footer>
 
         </div><!-- #page -->

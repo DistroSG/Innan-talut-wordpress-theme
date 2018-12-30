@@ -1,3 +1,83 @@
 #main-nav {
     grid-area: nav;
+    background-color: $green-color-background;
+    font-family: 'Prata', serif;
+}
+
+.menu-nav-container {
+    display: none;
+    clear: both;
+}
+
+#main-nav[aria-expanded="true"] .menu-nav-container {
+    display: block;
+}
+
+#primary-menu ul {
+    display: none;
+}
+
+#primary-menu li {
+    padding: 1rem;
+}
+
+#primary-menu>li:last-child {
+    padding-bottom: 2rem;
+}
+
+#primary-menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#primary-menu .current_page_item>a,
+#primary-menu .current_page_ancestor>a {
+    color: $yellow-color-hover;
+}
+
+#primary-menu .current_page_ancestor .arrow {
+    border-color: $yellow-color-hover;
+}
+
+#primary-menu .show-sub-menu>ul {
+    display: block;
+}
+
+@media all and (min-width: $breakpoint-medium) {
+    .menu-nav-container {
+        display: block;
+    }
+    #primary-menu {
+        display: flex;
+        justify-content: center;
+    }
+    #primary-menu>li {
+        padding: 1.5rem 1rem;
+    }
+    #primary-menu>li:last-child {
+        padding-bottom: 1rem;
+    }
+    #primary-menu>li>ul {
+        margin-top: 1.5rem;
+        left: 0;
+    }
+    #primary-menu a:hover {
+        color: $yellow-color-hover;
+    }
+    #primary-menu li {
+        position: relative;
+    }
+    #primary-menu ul {
+        background-color: $green-color-background;
+        padding: 0;
+        position: absolute;
+        min-width: 100%;
+    }
+    #primary-menu li:hover>ul {
+        display: block;
+    }
+    #primary-menu li:hover>.nav-parent-button>.arrow {
+        @include rotateArrow();
+    }
 }

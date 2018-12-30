@@ -2,3 +2,11 @@
     display: grid;
     grid-template-areas: "header" "nav" "sidebar" "content" "footer";
 }
+
+@media all and (min-width: $breakpoint-medium) {
+    #page {
+        display: grid;
+        grid-template-areas: "header header header" "nav nav nav" ".  sidebar . " ". content  ." "footer footer footer";
+        grid-template-columns: 1fr 600px 1fr;
+    }
+}
