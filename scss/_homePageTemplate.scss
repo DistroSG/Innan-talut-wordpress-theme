@@ -3,10 +3,10 @@
     grid-template-areas: "header" "nav" "sidebar" "content" "footer";
 }
 
-@media all and (min-width: $breakpoint-medium) {
+@media all and (min-width: $breakpoint-small) {
     #page {
         display: grid;
         grid-template-areas: "header header header" "nav nav nav" ".  sidebar . " ". content  ." "footer footer footer";
-        grid-template-columns: 1fr 600px 1fr;
+        grid-template-columns: 1fr 38rem 1fr;
     }
 }

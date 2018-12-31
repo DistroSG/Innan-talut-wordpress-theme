@@ -34,7 +34,7 @@
     text-transform: uppercase;
 }
 
-@media all and (min-width: $breakpoint-medium) {
+@media all and (min-width: $breakpoint-small) {
     #site-title a {
         font-size: 5rem;
     }

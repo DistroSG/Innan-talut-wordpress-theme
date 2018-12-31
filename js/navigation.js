@@ -4,7 +4,7 @@
  *
  */
 
-window.onload = function () {
+window.onload = () => {
     const mainNav = document.getElementById("main-nav");
 
     if (!mainNav) {
@@ -22,36 +22,14 @@ function initParentButtons(mainNav) {
         return;
     }
 
-    for (const liElement of liElementsWithSubMenu) {
-        const button = liElement.getElementsByClassName("nav-parent-button")[0];
-
-        button.onclick = function () {
-            let liClasses = liElement.getAttribute("class");
-
-            if (liClasses.includes("show-sub-menu")) {
-                liClasses = liClasses.replace("show-sub-menu", "");
-            } else {
-                liClasses += " show-sub-menu";
-            }
-
-            liElement.setAttribute("class", liClasses);
-        }
-
+    for (const liElementWithSubMenu of liElementsWithSubMenu) {
+        const button = liElementWithSubMenu.getElementsByClassName("nav-parent-button")[0];
+        button.onclick = () => liElementWithSubMenu.toggleAttribute("sub-menu-expanded");
     }
 
 }
 
 function initMenuButton(mainNav) {
     const button = document.getElementById("nav-button");
-
-    button.onclick = function () {
-        const ariaExpanded = mainNav.getAttribute("aria-expanded");
-
-        if (ariaExpanded === "true") {
-            mainNav.setAttribute("aria-expanded", "false");
-        } else {
-            mainNav.setAttribute("aria-expanded", "true");
-        }
-
-    }
+    button.onclick = () => mainNav.toggleAttribute("menu-expanded");
 }

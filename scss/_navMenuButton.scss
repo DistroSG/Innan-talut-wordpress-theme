@@ -42,15 +42,15 @@
     bottom: 0;
 }
 
-#main-nav[aria-expanded="true"] #nav-icon-line-1 {
+#main-nav[menu-expanded] #nav-icon-line-1 {
     transform: translateY(0.45rem) translateY(-50%) rotate(-45deg);
 }
 
-#main-nav[aria-expanded="true"] #nav-icon-line-2 {
+#main-nav[menu-expanded] #nav-icon-line-2 {
     opacity: 0;
 }
 
-#main-nav[aria-expanded="true"] #nav-icon-line-3 {
+#main-nav[menu-expanded] #nav-icon-line-3 {
     transform: translateY(-0.45rem) translateY(50%) rotate(45deg);
 }
 

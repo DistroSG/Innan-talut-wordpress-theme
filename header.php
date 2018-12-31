@@ -24,7 +24,7 @@
             </header>
 
             <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                <nav id="main-nav" class="site-nav" aria-expanded="false">
+                <nav id="main-nav" class="site-nav">
                     <button id="nav-button">
 							<span id="nav-icon">
 								<span id="nav-icon-line-1" class="nav-icon-line"></span>

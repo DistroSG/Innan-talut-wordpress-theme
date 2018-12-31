@@ -9,7 +9,7 @@
     clear: both;
 }
 
-#main-nav[aria-expanded="true"] .menu-nav-container {
+#main-nav[menu-expanded] .menu-nav-container {
     display: block;
 }
 
@@ -40,7 +40,7 @@
     border-color: $yellow-color-hover;
 }
 
-#primary-menu .show-sub-menu>ul {
+#primary-menu [sub-menu-expanded]>ul {
     display: block;
 }
 

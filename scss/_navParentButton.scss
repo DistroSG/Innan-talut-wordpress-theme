@@ -14,7 +14,7 @@
     transform: rotate(45deg);
 }
 
-.show-sub-menu>.nav-parent-button>.arrow {
+#main-nav [sub-menu-expanded]>.nav-parent-button>.arrow {
     @include rotateArrow();
 }
 
