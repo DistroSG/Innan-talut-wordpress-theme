@@ -1,9 +1,16 @@
-$breakpoint-small: 38rem;
-$breakpoint-medium: 56.25rem;
+$breakpoint-small: 41rem;
+$breakpoint-medium: 56rem;
+$breakpoint-large: 80rem;
 $green-color-background: #272904;
 $green-color-hover: #3d4006;
 $yellow-color-hover: #e0d954;
 
 @mixin rotateArrow() {
     transform: rotate(-135deg)
+  }
+  
+  @mixin contentGrid($contentWidth: 75rem){
+    display: grid;
+    grid-template-areas: ". content  .";
+    grid-template-columns: 1fr $contentWidth 1fr;
   }

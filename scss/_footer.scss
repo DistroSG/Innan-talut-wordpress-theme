@@ -1,3 +1,53 @@
 #colophon {
     grid-area: footer;
+    background-color: $green-color-background;
+    padding: 2rem;
+    position: relative;
+    color: gray;
+}
+
+#colophon section {
+    margin-bottom: 1rem;
+}
+
+#colophon h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#colophon p {
+    font-size: 0.9rem;
+}
+
+#colophon a {
+    color: gray;
+    text-decoration: none;
+}
+
+#copyright {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0px;
+}
+
+@media all and (min-width: $breakpoint-small) {
+    #colophon .content {
+        display: flex;
+        justify-content: space-between;
+    }
+    #copyright {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+@media all and (min-width: $breakpoint-large) {
+    #colophon {
+        @include contentGrid();
+    }
+    #colophon .content {
+        display: flex;
+        justify-content: space-between;
+    }
 }

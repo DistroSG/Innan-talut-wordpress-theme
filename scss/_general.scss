@@ -11,6 +11,10 @@ h1 {
     font-family: 'Prata', serif;
 }
 
+p{
+    margin: 1rem 0;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -32,4 +36,13 @@ a:focus {
 
 button::-moz-focus-inner {
     border: 0;
+}
+
+#page {
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+}
+
+.content{
+    grid-area: content;
 }

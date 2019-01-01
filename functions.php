@@ -60,4 +60,28 @@ function add_button_to_nav_menu_parent_item( $item_output, $item, $depth) {
 
     return $item_output;
 }
+
+add_action('widgets_init', 'new_widgets_init');
+
+
+function new_widgets_init() {
+
+  register_sidebar( array(
+  'name'          => 'Footer Bottom Left',
+  'id'            => 'sidebar-1',
+  'description'   => 'Add widgets here.',
+  'before_widget' => '<section id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</section>',
+  ) );
+
+    
+  register_sidebar( array(
+    'name'          => 'Footer Bottom Right',
+    'id'            => 'sidebar-2',
+    'description'   => 'Add widgets here.',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    ) );
+  
+}
 ?>

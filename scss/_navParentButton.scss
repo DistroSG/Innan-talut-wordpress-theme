@@ -18,7 +18,7 @@
     @include rotateArrow();
 }
 
-@media all and (min-width: $breakpoint-medium) {
+@media all and (min-width: $breakpoint-large) {
     .nav-parent-button {
         padding-right: 0.5rem;
         pointer-events: none;

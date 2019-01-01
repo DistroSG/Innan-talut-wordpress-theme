@@ -1,0 +1,11 @@
+#main {
+    grid-area: main;
+    margin: 1rem;
+}
+
+
+@media all and (min-width: $breakpoint-small) {
+    #main {
+        @include contentGrid(38rem);
+    }
+}

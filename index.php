@@ -1,22 +1,23 @@
 <?php get_header(); ?>
-<aside id="sidebar-primary" class="site-sidebar"></aside>
 
-<main id="content" class="site-content">
-	<?php
-		if ( have_posts() ) :
-			echo '<h1> Content was found! </h1>';
+<main id="main" class="site-content">
 
-			while ( have_posts() ) :
-				/**The function the_post() takes the current item in the collection of posts and makes it available for use inside this iteration of The Loop. */
-				the_post();
-				echo '<h2> Current content is: </h2>';
-				the_content();
-			endwhile;
+	<div class="content">
 
-		else :
-			echo '<h1> No content was found! :( </h1>';
-		endif;
-	?>
+		<?php if (have_posts()) : ?>
+				<?php 
+					while (have_posts()) :
+						/**The function the_post() takes the current item in the collection of posts and makes it available for use inside this iteration of The Loop. */ 
+						the_post(); 
+						the_content();
+					endwhile; 
+				?>
+		<?php else : ?>
+			<h1> No content was found! :( </h1>
+		<?php endif; ?>
+
+	</div>
+
 </main>
 
 <?php get_footer(); ?>

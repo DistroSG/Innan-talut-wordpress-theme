@@ -32,6 +32,8 @@
 								<span id="nav-icon-line-3" class="nav-icon-line"></span>
 							</span>
                     </button>
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 2 ) ); ?>
+                    <div class="content">
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 2 ) ); ?>
+                    </div>
                 </nav>
             <?php endif; ?> 
