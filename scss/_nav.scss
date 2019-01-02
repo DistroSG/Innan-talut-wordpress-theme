@@ -1,6 +1,6 @@
 #main-nav {
     grid-area: nav;
-    background-color: $green-color-background;
+    background-color: $green-color-main;
     font-family: 'Prata', serif;
 }
 
@@ -69,7 +69,7 @@
         position: relative;
     }
     #primary-menu ul {
-        background-color: $green-color-background;
+        background-color: $green-color-main;
         padding: 0;
         position: absolute;
         min-width: 100%;

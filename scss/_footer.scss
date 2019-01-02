@@ -1,6 +1,6 @@
 #colophon {
     grid-area: footer;
-    background-color: $green-color-background;
+    background-color: $green-color-main;
     padding: 2rem;
     position: relative;
     color: gray;
@@ -17,18 +17,21 @@
 }
 
 #colophon p {
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
 }
 
 #colophon a {
     color: gray;
-    text-decoration: none;
 }
 
 #copyright {
-    font-size: 0.8rem;
     position: absolute;
     bottom: 0px;
+}
+
+
+#copyright p {
+    font-size: 0.875rem;
 }
 
 @media all and (min-width: $breakpoint-small) {

@@ -6,6 +6,6 @@
 
 @media all and (min-width: $breakpoint-small) {
     #main {
-        @include contentGrid(38rem);
+        @include contentGrid(37.5rem);
     }
 }
