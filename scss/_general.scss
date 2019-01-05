@@ -46,9 +46,18 @@ blockquote {
 
 #page {
     display: grid;
-    grid-template-areas: "header" "nav" "main" "footer";
+    grid-template-areas: "header" "nav" "beforeContent" "main" "afterContent" "footer";
 }
 
 .content {
     grid-area: content;
+}
+
+#not-found-image {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#not-found-image img {
+    max-width: 50%;
 }

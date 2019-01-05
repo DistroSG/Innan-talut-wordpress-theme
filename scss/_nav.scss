@@ -73,6 +73,7 @@
         padding: 0;
         position: absolute;
         min-width: 100%;
+        z-index: 2;
     }
     #primary-menu li:hover>ul {
         display: block;

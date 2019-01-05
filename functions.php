@@ -66,22 +66,37 @@ add_action('widgets_init', 'new_widgets_init');
 
 function new_widgets_init() {
 
-  register_sidebar( array(
-  'name'          => 'Footer Bottom Left',
-  'id'            => 'sidebar-1',
-  'description'   => 'Add widgets here.',
-  'before_widget' => '<section id="%1$s" class="widget %2$s">',
-  'after_widget'  => '</section>',
-  ) );
-
-    
-  register_sidebar( array(
-    'name'          => 'Footer Bottom Right',
-    'id'            => 'sidebar-2',
+  register_sidebar(array(
+    'name'          => 'Before content',
+    'id'            => 'before-content',
     'description'   => 'Add widgets here.',
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
-    ) );
+  ));
+
+    register_sidebar(array(
+      'name'          => 'After content',
+      'id'            => 'after-content',
+      'description'   => 'Add widgets here.',
+      'before_widget' => '<section id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</section>',
+    ));
+
+  register_sidebar(array(
+    'name'          => 'Footer left',
+    'id'            => 'footer-left',
+    'description'   => 'Add widgets here.',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'Footer right',
+    'id'            => 'footer-right',
+    'description'   => 'Add widgets here.',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+  ));
   
 }
 ?>

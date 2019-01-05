@@ -1,7 +1,7 @@
             <footer id="colophon" class="site-footer">
                 <div class="content">
-                    <?php get_sidebar( '1' ); ?>
-                    <?php get_sidebar( '2' ); ?>
+                    <?php get_sidebar('footer-left'); ?>
+                    <?php get_sidebar('footer-right'); ?>
                 </div>
                 <div id="copyright">
                     <p>© 2018 - 2019 developed by <a href="https://alexgradov.com/" target="_blank"> Alexander Gradov </a></p>
