@@ -18,7 +18,7 @@
 }
 
 #site-title a {
-    font-size: 4rem;
+    font-size: 3rem + 1vw;
     font-weight: normal;
     color: lightgrey;
     text-align: center;
@@ -32,10 +32,4 @@
 
 #site-description {
     text-transform: uppercase;
-}
-
-@media all and (min-width: $breakpoint-small) {
-    #site-title a {
-        font-size: 5rem;
-    }
 }

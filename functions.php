@@ -13,8 +13,8 @@ function add_theme_scripts() {
 add_theme_support('custom-header', array(
   'default-image' => '',
   'width' => 1920,
-  'height' => 300,
-  'flex-height' => true,
+  'height' => 200,
+  'flex-height' => false,
 ));
 
 add_action('wp_loaded', 'generate_header');
