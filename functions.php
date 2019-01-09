@@ -10,12 +10,16 @@ function add_theme_scripts() {
   wp_enqueue_script('theme-navigation-script');
 }
 
-add_theme_support('custom-header', array(
-  'default-image' => '',
-  'width' => 1920,
-  'height' => 200,
-  'flex-height' => false,
-));
+add_action( 'after_setup_theme', 'theme_setup');
+
+function theme_setup(){
+  add_theme_support('custom-header', array(
+    'default-image' => '',
+    'width' => 1920,
+    'height' => 200,
+    'flex-height' => false,
+  ));
+}
 
 add_action('wp_loaded', 'generate_header');
 
@@ -99,4 +103,148 @@ function new_widgets_init() {
   ));
   
 }
+
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+  register_post_type( 'inna_art_product',
+    array(
+      'labels' => array(
+        'name' => 'Arts',
+        'singular_name' => 'Art',
+        'search_items' => 'Search arts',
+        'not_found' => 'No arts found'
+      ),
+      'public' => true,
+      'menu_icon' => 'dashicons-art',
+      'show_in_rest' => true,
+      'rewrite' => array('slug' => 'arts'),
+      'supports' => array('title')
+    )
+  );
+}
+
+add_action( 'init', 'create_art_tax' );
+
+function create_art_tax() {
+	register_taxonomy(
+		'inna_art_type',
+		'inna_art_product',
+    array(
+      'label' => 'Types',
+      'show_in_rest' => true, 
+      'rewrite' => array('slug' => 'art-types'),
+      'hierarchical' => true
+      ));
+  
+  if(!term_exists( 'All', 'product' )){
+    wp_insert_term(
+      'All', 
+      'inna_art_product', 
+      array('description'=> 'All arts.'));
+ }
+
+
+}
+
+add_action('save_post', 'set_art_product_default_term');
+
+function set_art_product_default_term($post_id) {
+
+  if (get_post_type($post_id) === 'inna_art_product') {
+     
+    $terms = wp_get_post_terms($post_id, 'inna_art_type');
+
+    if (empty($terms)) {
+        wp_set_object_terms($post_id, 'All', 'inna_art_type');
+    }
+
+  }
+
+}
+
+add_filter('default_title', 'art_product_default_title_filter', 10, 2);
+
+function art_product_default_title_filter($post_title, $post) {
+
+  if ($post->post_type === 'inna_art_product') {
+      return 'art-' . $post->ID;
+  }
+
+}
+
+add_filter( 'manage_inna_art_product_posts_columns', 'set_custom_edit_art_columns' );
+
+function set_custom_edit_art_columns($columns) {
+
+  return array(
+    'cb' => '<input type="checkbox" />',
+    'thumbnail' => __('Image'),
+    'title' => __('Name'),
+    'audio' => __('Audio'),
+    'date' => __('Date'),
+);
+
+}
+
+add_action( 'manage_inna_art_product_posts_custom_column' , 'custom_art_column', 10, 2 );
+
+function custom_art_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'thumbnail' :
+        rwmb_the_value('art_product_art_select', array( 'size' => 'thumbnail' ), $post_id);
+        break;
+
+        case 'audio' :
+
+        $file = reset(rwmb_meta('art_product_audio_select', array('limit' => 1), $post_id));
+
+        echo $file['name'];
+       
+        break;
+    }
+}
+
+
+
+
+add_filter( 'rwmb_meta_boxes', 'art_product_get_meta_box' );
+
+function art_product_get_meta_box( $meta_boxes ) {
+	$prefix = 'art_product_';
+
+	$meta_boxes[] = array(
+		'id' => 'standart',
+		'title' => esc_html__( 'Standard Fields', 'metabox-online-generator' ),
+		'post_types' => array('inna_art_product'),
+		'context' => 'after_title',
+		'priority' => 'high',
+    'autosave' => 'true',
+    'fields' => array(
+			array(
+				'id' => $prefix . 'art_select',
+				'type' => 'single_image',
+				'name' => esc_html__( 'Art Select', 'metabox-online-generator' ),
+				'max_file_uploads' => '1'
+			),
+			array(
+				'id' => $prefix . 'audio_select',
+				'type' => 'file_advanced',
+				'name' => esc_html__( 'Audio Select', 'metabox-online-generator' ),
+				'mime_type' => 'audio',
+				'max_file_uploads' => 1,
+				'max_status' => 'false'
+      ),
+      array(
+				'id' => $prefix . 'textarea',
+				'type' => 'textarea',
+				'name' => esc_html__( 'Product description', 'metabox-online-generator' ),
+				'std' => 'Pidätkö tuotteesta? Ota yhteyttä. Puhelin 040 835 0388. Sähköposti innastyle@gmail.com'
+			)
+		)
+	);
+
+	return $meta_boxes;
+}
+
 ?>

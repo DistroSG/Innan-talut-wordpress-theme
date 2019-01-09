@@ -1,0 +1,23 @@
+.art-content {
+    display: grid;
+}
+
+@media all and (min-width: $breakpoint-small) {
+    .art-content {
+        grid-template-columns: 1fr 265px;
+    }
+    .image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .audio {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .info {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}

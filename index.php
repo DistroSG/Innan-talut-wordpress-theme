@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar('before-content'); ?>
 
-<main id="main" class="site-content">
+<main id="main" class="site-content text">
 
 	<div class="content">
 

@@ -3,9 +3,15 @@
     margin: 1rem;
 }
 
-
 @media all and (min-width: $breakpoint-small) {
-    #main {
+    #main.text,
+    #main.art  {
         @include contentGrid(37.5rem);
     }
 }
+
+@media all and (min-width: $breakpoint-large) {
+    #main.gallery {
+        @include contentGrid();
+    }
+ }
