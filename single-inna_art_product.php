@@ -15,7 +15,11 @@
             ?>
             <?php
                 $audio = reset(rwmb_meta('art_product_audio_select', array('limit' => 1), $post_id));
-                echo '<audio class="audio" controls="" src="', $audio["url"],'"></audio>'
+        
+                if(!is_null($audio["url"])){
+                 echo '<audio class="audio" controls="" src="', $audio["url"],'"></audio>';
+                }
+
              ?>
             <p class="info"><?php  rwmb_the_value('art_product_textarea', array(), $post_id);?></p>
         </div>
