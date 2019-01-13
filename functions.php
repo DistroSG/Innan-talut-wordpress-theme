@@ -8,6 +8,9 @@ function add_theme_scripts() {
 
   wp_register_script('theme-navigation-script', get_template_directory_uri() . '/js/navigation.js');
   wp_enqueue_script('theme-navigation-script');
+
+  wp_register_script('theme-polyfill-script', get_template_directory_uri() . '/js/polyfill.js');
+  wp_enqueue_script('theme-polyfill-script');
 }
 
 add_action( 'after_setup_theme', 'theme_setup');
