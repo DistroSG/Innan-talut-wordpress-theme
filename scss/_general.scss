@@ -63,12 +63,17 @@ blockquote {
     max-width: 50%;
 }
 
-.pagination{
+.pagination {
     margin: 1rem 0;
 }
 
+audio {
+    max-width: 100%;
+    height: auto;
+}
+
 .pagination .nav-links a,
-.pagination .nav-links .current{
+.pagination .nav-links .current {
     background-color: $green-color-main;
     border-radius: 0.3125rem;
     color: white;
@@ -78,11 +83,11 @@ blockquote {
     text-decoration: none;
 }
 
-.pagination .nav-links a{
+.pagination .nav-links a {
     background-color: $green-color-main;
 }
 
 .pagination .nav-links a:hover,
-.pagination .nav-links .current{
+.pagination .nav-links .current {
     background-color: $green-color-second;
 }

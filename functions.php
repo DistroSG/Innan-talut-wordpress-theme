@@ -227,22 +227,37 @@ function art_product_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'art_select',
 				'type' => 'single_image',
-				'name' => esc_html__( 'Art Select', 'metabox-online-generator' ),
+				'name' => esc_html__( 'Art:', 'metabox-online-generator' ),
 				'max_file_uploads' => '1'
+			),
+      array(
+				'id' => $prefix . 'image_wysiwyg',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Art description:', 'metabox-online-generator' ),
+        'std' => 'Pidätkö tuotteesta? Ota yhteyttä. Puhelin 040 835 0388. Sähköposti innastyle@gmail.com',
+        'options' => array(
+          'teeny' => true,
+          'media_buttons' => false
+      )
 			),
 			array(
 				'id' => $prefix . 'audio_select',
 				'type' => 'file_advanced',
-				'name' => esc_html__( 'Audio Select', 'metabox-online-generator' ),
+				'name' => esc_html__( 'Audio:', 'metabox-online-generator' ),
 				'mime_type' => 'audio',
 				'max_file_uploads' => 1,
 				'max_status' => 'false'
       ),
       array(
-				'id' => $prefix . 'textarea',
-				'type' => 'textarea',
-				'name' => esc_html__( 'Product description', 'metabox-online-generator' ),
-				'std' => 'Pidätkö tuotteesta? Ota yhteyttä. Puhelin 040 835 0388. Sähköposti innastyle@gmail.com'
+				'id' => $prefix . 'audio_wysiwyg',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Audio description:', 'metabox-online-generator' ),
+        'std' => 'Kappale: <br> Säveltäjä:',
+        'options' => array(
+          'textarea_rows' => 2,
+          'teeny' => true,
+          'media_buttons' => false
+      )
 			)
 		)
 	);
