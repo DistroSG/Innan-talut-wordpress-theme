@@ -11,8 +11,8 @@ window.onload = () => {
         return;
     }
 
-    this.initMenuButton(mainNav);
-    this.initParentButtons(mainNav);
+    initMenuButton(mainNav);
+    initParentButtons(mainNav);
 }
 
 function initParentButtons(mainNav) {
