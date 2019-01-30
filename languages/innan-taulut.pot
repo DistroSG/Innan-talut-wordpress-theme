@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Innan-taulut\n"
-"POT-Creation-Date: 2019-01-30 14:41+0200\n"
+"POT-Creation-Date: 2019-01-30 17:02+0200\n"
 "PO-Revision-Date: 2017-05-17 21:35-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,40 +22,68 @@ msgstr ""
 msgid "Arts"
 msgstr ""
 
-#: functions.php:187
-msgid "Image"
+#: functions.php:119
+msgid "Art"
+msgstr ""
+
+#: functions.php:120
+msgid "Add new"
+msgstr ""
+
+#: functions.php:121
+msgid "Search arts"
+msgstr ""
+
+#: functions.php:122
+msgid "No arts found"
+msgstr ""
+
+#: functions.php:140
+msgid "Types"
 msgstr ""
 
 #: functions.php:188
-msgid "Name"
+msgid "Image"
 msgstr ""
 
 #: functions.php:189
-msgid "Audio"
+msgid "Name"
 msgstr ""
 
 #: functions.php:190
+msgid "Audio"
+msgstr ""
+
+#: functions.php:191
 msgid "Date"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:224
 msgid "Standard Fields"
 msgstr ""
 
-#: functions.php:232
+#: functions.php:233
 msgid "Art:"
 msgstr ""
 
-#: functions.php:238
+#: functions.php:239
 msgid "Art description:"
 msgstr ""
 
-#: functions.php:248
+#: functions.php:240
+msgid "Do you like the product? Take contact. Phone number 040 835 0388. Email innastyle@gmail.com"
+msgstr ""
+
+#: functions.php:249
 msgid "Audio:"
 msgstr ""
 
-#: functions.php:256
+#: functions.php:257
 msgid "Audio description:"
+msgstr ""
+
+#: functions.php:258
+msgid "Composition: <br> Composer:"
 msgstr ""
 
 #: index.php:22
