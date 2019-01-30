@@ -5,7 +5,7 @@
 
 	<div class="content">
 
-    <h1 class="entry-title"> <?php echo __('Galleria') ?> </h1>
+    <h1 class="entry-title"><?php echo get_queried_object()->name?></h1>
     <section class="images">
 
         <?php while (have_posts()): the_post();  ?>
