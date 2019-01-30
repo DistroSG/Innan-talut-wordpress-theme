@@ -1,0 +1,79 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Innan-taulut\n"
+"POT-Creation-Date: 2019-01-30 14:41+0200\n"
+"PO-Revision-Date: 2017-05-17 21:35-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:118
+msgid "Arts"
+msgstr ""
+
+#: functions.php:187
+msgid "Image"
+msgstr ""
+
+#: functions.php:188
+msgid "Name"
+msgstr ""
+
+#: functions.php:189
+msgid "Audio"
+msgstr ""
+
+#: functions.php:190
+msgid "Date"
+msgstr ""
+
+#: functions.php:223
+msgid "Standard Fields"
+msgstr ""
+
+#: functions.php:232
+msgid "Art:"
+msgstr ""
+
+#: functions.php:238
+msgid "Art description:"
+msgstr ""
+
+#: functions.php:248
+msgid "Audio:"
+msgstr ""
+
+#: functions.php:256
+msgid "Audio description:"
+msgstr ""
+
+#: index.php:22
+msgid "Content not found!"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Innan Taulut"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme for Inna's pictures."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Alexander Gradov"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://alexgradov.com/"
+msgstr ""

@@ -14,6 +14,7 @@
         <div id="page" class="site">
 
             <header id="masthead" class="site-header">
+                <?php get_sidebar('header-right-corner'); ?>
                 <h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
                 <?php $description = get_bloginfo( 'description', 'display' ); ?>
 

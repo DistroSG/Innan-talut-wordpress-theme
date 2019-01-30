@@ -19,7 +19,7 @@
 					}
 				?>
 		<?php else : ?>
-			<h1>Sisältöä ei löytynyt</h1>
+			<h1 class="entry-title"><?php _e( 'Content not found!', 'innan-taulut')?></h1>
 			<figure id="not-found-image"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82._1929._%D0%93%D0%A2%D0%93.PNG" alt="Black Square"></figure>
 		<?php endif; ?>
 

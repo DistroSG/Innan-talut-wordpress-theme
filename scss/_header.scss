@@ -8,6 +8,25 @@
     text-align: center;
 }
 
+#masthead #header-right-corner {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+
+#masthead #header-right-corner ul li {
+    display: inline-block;
+}
+
+#masthead #header-right-corner ul li.current-lang img,
+#masthead #header-right-corner ul li:hover img {
+    border: solid $green-color-second 0.1875rem; 
+}
+
+#masthead #header-right-corner ul li img {
+    min-width: 1.875rem;
+}
+
 #masthead h1 {
     margin-bottom: 0.3125rem;
 }

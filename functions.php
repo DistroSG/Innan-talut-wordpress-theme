@@ -22,6 +22,8 @@ function theme_setup(){
     'height' => 200,
     'flex-height' => false,
   ));
+
+  load_theme_textdomain('innan-taulut', get_template_directory() . '/languages');
 }
 
 add_action('wp_loaded', 'generate_header');
@@ -74,6 +76,14 @@ add_action('widgets_init', 'new_widgets_init');
 function new_widgets_init() {
 
   register_sidebar(array(
+    'name'          => 'Header right corner',
+    'id'            => 'header-right-corner',
+    'description'   => 'Add widgets here.',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+  ));
+
+  register_sidebar(array(
     'name'          => 'Before content',
     'id'            => 'before-content',
     'description'   => 'Add widgets here.',
@@ -113,10 +123,11 @@ function create_post_type() {
   register_post_type( 'inna_art_product',
     array(
       'labels' => array(
-        'name' => 'Arts',
-        'singular_name' => 'Art',
-        'search_items' => 'Search arts',
-        'not_found' => 'No arts found'
+        'name' => __('Arts', 'innan-taulut'),
+        'singular_name' => __('Art', 'innan-taulut'),
+        'add_new' => __("Add new", 'innan-taulut'),
+        'search_items' => __('Search arts', 'innan-taulut'),
+        'not_found' => __('No arts found', 'innan-taulut')
       ),
       'public' => true,
       'menu_icon' => 'dashicons-art',
@@ -134,7 +145,7 @@ function create_art_tax() {
 		'inna_art_type',
 		'inna_art_product',
     array(
-      'label' => 'Types',
+      'label' => __('Types', 'innan-taulut'),
       'show_in_rest' => true, 
       'rewrite' => array('slug' => 'art-types'),
       'hierarchical' => true
@@ -182,10 +193,10 @@ function set_custom_edit_art_columns($columns) {
 
   return array(
     'cb' => '<input type="checkbox" />',
-    'thumbnail' => __('Image'),
-    'title' => __('Name'),
-    'audio' => __('Audio'),
-    'date' => __('Date'),
+    'thumbnail' => __('Image', 'innan-taulut'),
+    'title' => __('Name', 'innan-taulut'),
+    'audio' => __('Audio', 'innan-taulut'),
+    'date' => __('Date', 'innan-taulut'),
 );
 
 }
@@ -218,7 +229,7 @@ function art_product_get_meta_box( $meta_boxes ) {
 
 	$meta_boxes[] = array(
 		'id' => 'standart',
-		'title' => esc_html__( 'Standard Fields', 'metabox-online-generator' ),
+		'title' => esc_html__( 'Standard Fields', 'innan-taulut' ),
 		'post_types' => array('inna_art_product'),
 		'context' => 'after_title',
 		'priority' => 'high',
@@ -227,14 +238,14 @@ function art_product_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'art_select',
 				'type' => 'single_image',
-				'name' => esc_html__( 'Art:', 'metabox-online-generator' ),
+				'name' => esc_html__( 'Art:', 'innan-taulut' ),
 				'max_file_uploads' => '1'
 			),
       array(
 				'id' => $prefix . 'image_wysiwyg',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Art description:', 'metabox-online-generator' ),
-        'std' => 'Pidätkö tuotteesta? Ota yhteyttä. Puhelin 040 835 0388. Sähköposti innastyle@gmail.com',
+				'name' => esc_html__( 'Art description:', 'innan-taulut' ),
+        'std' => __('Do you like the product? Take contact. Phone number 040 835 0388. Email innastyle@gmail.com', 'innan-taulut'),
         'options' => array(
           'teeny' => true,
           'media_buttons' => false
@@ -243,7 +254,7 @@ function art_product_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'audio_select',
 				'type' => 'file_advanced',
-				'name' => esc_html__( 'Audio:', 'metabox-online-generator' ),
+				'name' => esc_html__( 'Audio:', 'innan-taulut' ),
 				'mime_type' => 'audio',
 				'max_file_uploads' => 1,
 				'max_status' => 'false'
@@ -251,8 +262,8 @@ function art_product_get_meta_box( $meta_boxes ) {
       array(
 				'id' => $prefix . 'audio_wysiwyg',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Audio description:', 'metabox-online-generator' ),
-        'std' => 'Kappale: <br> Säveltäjä:',
+				'name' => esc_html__( 'Audio description:', 'innan-taulut' ),
+        'std' => __('Composition: <br> Composer:', "innan-taulut"),
         'options' => array(
           'textarea_rows' => 2,
           'teeny' => true,
