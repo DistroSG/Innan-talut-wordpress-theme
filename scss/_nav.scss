@@ -4,12 +4,12 @@
     font-family: 'Prata', serif;
 }
 
-.menu-nav-container {
+.nav-container {
     display: none;
     clear: both;
 }
 
-#main-nav[menu-expanded] .menu-nav-container {
+#main-nav[menu-expanded] .nav-container {
     display: block;
 }
 
@@ -45,7 +45,7 @@
 }
 
 @media all and (min-width: $breakpoint-medium) {
-    .menu-nav-container {
+    .nav-container {
         display: block;
     }
     #primary-menu {

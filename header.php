@@ -34,7 +34,7 @@
 							</span>
                     </button>
                     <div class="content">
-                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 2 ) ); ?>
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-container', 'depth' => 2 ) ); ?>
                     </div>
                 </nav>
             <?php endif; ?> 
