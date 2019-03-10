@@ -91,3 +91,9 @@ audio {
 .pagination .nav-links .current {
     background-color: $green-color-second;
 }
+
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover {
+    color: $yellow-color-hover;
+}
