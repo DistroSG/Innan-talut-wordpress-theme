@@ -182,7 +182,7 @@ add_filter('default_title', 'art_product_default_title_filter', 10, 2);
 function art_product_default_title_filter($post_title, $post) {
 
   if ($post->post_type === 'inna_art_product') {
-      return 'art-' . $post->ID;
+      return 'Art №' . $post->ID;
   }
 
 }
