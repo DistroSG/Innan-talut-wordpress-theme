@@ -150,31 +150,6 @@ function create_art_tax() {
       'rewrite' => array('slug' => 'art-types'),
       'hierarchical' => true
       ));
-  
-  if(!term_exists( 'All', 'product' )){
-    wp_insert_term(
-      'All', 
-      'inna_art_product', 
-      array('description'=> 'All arts.'));
- }
-
-
-}
-
-add_action('save_post', 'set_art_product_default_term');
-
-function set_art_product_default_term($post_id) {
-
-  if (get_post_type($post_id) === 'inna_art_product') {
-     
-    $terms = wp_get_post_terms($post_id, 'inna_art_type');
-
-    if (empty($terms)) {
-        wp_set_object_terms($post_id, 'All', 'inna_art_type');
-    }
-
-  }
-
 }
 
 add_filter('default_title', 'art_product_default_title_filter', 10, 2);
